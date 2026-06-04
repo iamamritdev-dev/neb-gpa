@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neb.amritkc.com.np/sitemap.xml

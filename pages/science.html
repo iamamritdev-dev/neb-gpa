@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science GPA Calculator | NEB Class 11 & 12 Grade Calculator</title>
+    <meta name="description" content="Free NEB Science stream GPA calculator. Calculate grades for Physics, Chemistry, Biology, Mathematics with official NEB credit-hour weighting and accurate grading system.">
+    <meta name="keywords" content="science GPA calculator, NEB science, class 12 science, physics chemistry biology, Nepal education board, grade point average">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://neb.amritkc.com.np/pages/science.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neb.amritkc.com.np/pages/science.html">
+    <meta property="og:title" content="Science GPA Calculator | NEB Class 11 & 12 Grade Calculator">
+    <meta property="og:description" content="Calculate your NEB Science GPA instantly with accurate credit-hour weighting for Physics, Chemistry, Biology, and Mathematics.">
+    <meta property="og:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://neb.amritkc.com.np/pages/science.html">
+    <meta property="twitter:title" content="Science GPA Calculator | NEB Class 11 & 12 Grade Calculator">
+    <meta property="twitter:description" content="Calculate your NEB Science GPA instantly with accurate credit-hour weighting for Physics, Chemistry, Biology, and Mathematics.">
+    <meta property="twitter:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/calculator.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://neb.amritkc.com.np/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://neb.amritkc.com.np/#tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Science GPA Calculator",
+          "item": "https://neb.amritkc.com.np/pages/science.html"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="ambient-bg">
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <main class="calculator-page" data-calculator="science">
+        <div class="calculator-shell">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="../index.html#tools">Tools</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">Science GPA Calculator</span>
+            </nav>
+            <a class="back-link" href="/">← Back to home</a>
+            <header class="calculator-header">
+                <span class="section-label">GPA Calculator</span>
+                <h1><span data-stream-name>Science</span> GPA Calculator</h1>
+                <p>Enter marks for each subject. You can edit subjects.</p>
+            </header>
+
+            <section class="calculator-card" aria-label="Science GPA calculator">
+                <div class="calculator-toolbar">
+                    <h2>Subjects</h2>
+                    <div class="optional-subject-select">
+                        <label for="optional-subject">Optional Subject:</label>
+                        <select id="optional-subject" class="subject-dropdown">
+                            <option value="biology">Biology</option>
+                            <option value="computer">Computer Science</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="table-container">
+                    <table class="calculator-table science-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Theory Marks</th>
+                                <th>Practical Marks</th>
+                            </tr>
+                        </thead>
+                        <tbody data-subjects></tbody>
+                    </table>
+                </div>
+                <div class="calculator-actions">
+                    <button type="button" class="btn-secondary" data-reset>Clear Marks</button>
+                    <button type="button" class="btn-primary" data-calculate>Calculate GPA</button>
+                </div>
+                <div class="calculator-result">
+                    <div class="result-box">
+                        <div class="result-label">GPA</div>
+                        <div class="result-value" data-result-gpa>-</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Overall Grade</div>
+                        <div class="result-value" data-result-grade>-</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Total Credits</div>
+                        <div class="result-value" data-result-credits>-</div>
+                    </div>
+                </div>
+            </section>
+            <p class="calculator-note">Formula: GPA = Sum(grade point × credit hours) / Sum(credit hours).</p>
+
+            <!-- FAQ Section for Science GPA Calculator -->
+            <section id="faq" style="margin-top: 60px;">
+                <div class="section-container">
+                    <div class="section-header fade-up">
+                        <span class="section-label">FAQ</span>
+                        <h2>Science Stream GPA Calculator FAQs</h2>
+                        <p>Answers to common questions about Class 11 & 12 Science stream grading.</p>
+                    </div>
+                    <div class="faq-container">
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                What subjects are included in NEB Science stream?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>NEB Science stream includes: <strong>Physics, Chemistry, Biology, Mathematics</strong> (compulsory), plus optional subjects like Computer Science, Optional Mathematics, or additional sciences. Each subject has different credit hours and theory-practical weightings. Use this calculator to input all your subjects for accurate GPA.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                How is practical work weighted in Science subjects?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>In Science, practical work is weighted by subject: <strong>Physics & Chemistry (50% theory / 50% practical)</strong>, <strong>Biology (40% theory / 60% practical)</strong>, and <strong>Mathematics (100% theory)</strong>. This calculator automatically applies the correct weighting for each subject based on NEB standards.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                What is a good GPA in Science stream?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>A <strong>3.6+ GPA is considered excellent</strong> in Science stream and is competitive for university admissions and scholarships. A 3.2+ is considered good, while 2.8-3.2 is average. For medical and engineering entrance exams, 3.6+ is typically preferred. Check specific university requirements for admission cutoffs.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                Can I compare my Science GPA with other streams?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes. All NEB streams use the same 4.0 GPA scale, so GPAs are directly comparable across streams. However, subject combinations differ by stream. Science focuses on sciences and maths, while <a href="./management.html">Management</a> includes business subjects. The grading scale and difficulty vary, so context matters for fair comparison.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                What's the difference between Class 11 and Class 12 Science GPA?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Class 11 and Class 12 Science use the same subject structure and GPA calculation method. The main difference is curriculum depth and exam difficulty—Class 12 builds on Class 11 concepts. This calculator works for both levels. If you want to track both, calculate each year separately for year-wise comparison.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                How can I improve my Science GPA?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Focus on weak subjects first—improving one subject grade significantly impacts overall GPA due to credit-hour weighting. Practical exams in Physics, Chemistry, and Biology are often easier to improve than theory. Use this calculator to identify which subject improvements will have the most impact on your final GPA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-icon">N</div>
+                        <div>
+                            <span class="logo-text">NEB GPA</span>
+                            <div class="logo-sub">Academic Suite</div>
+                        </div>
+                    </a>
+                    <p>Empowering NEB students with accurate, free, and privacy-focused academic tools.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Calculators</h4>
+                    <ul>
+                        <li><a href="./science.html">Science GPA Calculator</a></li>
+                        <li><a href="./management.html">Management GPA Calculator</a></li>
+                        <li><a href="./see.html">SEE GPA Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                        <li><a href="../index.html#grading">NEB Grading System</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="./terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEB GPA Calculator. All rights reserved. Made with care for Nepali students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/calculator.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management GPA Calculator | NEB Class 11 & 12 Grade Calculator</title>
+    <meta name="description" content="Free NEB Management stream GPA calculator. Calculate grades for Accountancy, Economics, Business Studies, and all compulsory subjects with official NEB credit-hour weighting.">
+    <meta name="keywords" content="management GPA calculator, NEB management, class 12 management, accountancy calculator, economics calculator, Nepal education board">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://neb.amritkc.com.np/pages/management.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neb.amritkc.com.np/pages/management.html">
+    <meta property="og:title" content="Management GPA Calculator | NEB Class 11 & 12 Grade Calculator">
+    <meta property="og:description" content="Calculate your NEB Management GPA with accurate credit-hour weighting for all subjects including Accountancy, Economics, and Business Studies.">
+    <meta property="og:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://neb.amritkc.com.np/pages/management.html">
+    <meta property="twitter:title" content="Management GPA Calculator | NEB Class 11 & 12 Grade Calculator">
+    <meta property="twitter:description" content="Calculate your NEB Management GPA with accurate credit-hour weighting for all subjects including Accountancy, Economics, and Business Studies.">
+    <meta property="twitter:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/calculator.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://neb.amritkc.com.np/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://neb.amritkc.com.np/#tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Management GPA Calculator",
+          "item": "https://neb.amritkc.com.np/pages/management.html"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="ambient-bg">
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <main class="calculator-page" data-calculator="management">
+        <div class="calculator-shell">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="../index.html#tools">Tools</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">Management GPA Calculator</span>
+            </nav>
+            <a class="back-link" href="/">← Back to home</a>
+            <header class="calculator-header">
+                <span class="section-label">GPA Calculator</span>
+                <h1><span data-stream-name>Management</span> GPA Calculator</h1>
+                <p>Enter marks for each subject. You can edit subjects and credit hours to match your NEB marksheet.</p>
+            </header>
+
+            <section class="calculator-card" aria-label="Management GPA calculator">
+                <!-- Optional Subject Selector — standalone section above the table -->
+                <div class="optional-selector-panel" id="optional-selector-panel">
+                    <div class="optional-selector-header">
+                        <div class="optional-selector-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            <span>Choose Optional Subjects</span>
+                        </div>
+                        <span class="optional-counter" id="optional-counter">0 / 4 selected</span>
+                    </div>
+                    <div class="optional-chips" id="optional-chips">
+                        <label class="chip-label">
+                            <input type="checkbox" class="optional-subject-checkbox" value="accounting">
+                            <span class="chip">
+                                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Accountancy
+                            </span>
+                        </label>
+                        <label class="chip-label">
+                            <input type="checkbox" class="optional-subject-checkbox" value="economics">
+                            <span class="chip">
+                                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Economics
+                            </span>
+                        </label>
+                        <label class="chip-label">
+                            <input type="checkbox" class="optional-subject-checkbox" value="business">
+                            <span class="chip">
+                                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Business Studies
+                            </span>
+                        </label>
+                        <label class="chip-label">
+                            <input type="checkbox" class="optional-subject-checkbox" value="computer">
+                            <span class="chip">
+                                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Computer Science
+                            </span>
+                        </label>
+                        <label class="chip-label">
+                            <input type="checkbox" class="optional-subject-checkbox" value="hotel">
+                            <span class="chip">
+                                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Hotel Management
+                            </span>
+                        </label>
+                        <label class="chip-label">
+                            <input type="checkbox" class="optional-subject-checkbox" value="travel">
+                            <span class="chip">
+                                <svg class="chip-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Travel &amp; Tourism
+                            </span>
+                        </label>
+                    </div>
+                    <p class="optional-hint" id="optional-hint">Select up to 4 optional subjects to add them to your calculation.</p>
+                </div>
+
+                <!-- Table header -->
+                <div class="calculator-toolbar">
+                    <h2>Subjects</h2>
+                </div>
+
+                <div class="table-container">
+                    <table class="calculator-table science-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Theory Marks</th>
+                                <th>Practical/Internal Marks</th>
+                            </tr>
+                        </thead>
+                        <tbody data-subjects></tbody>
+                    </table>
+                </div>
+                <div class="calculator-actions">
+                    <button type="button" class="btn-secondary" data-reset>Clear Marks</button>
+                    <button type="button" class="btn-primary" data-calculate>Calculate GPA</button>
+                </div>
+                <div class="calculator-result">
+                    <div class="result-box">
+                        <div class="result-label">GPA</div>
+                        <div class="result-value" data-result-gpa>-</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Overall Grade</div>
+                        <div class="result-value" data-result-grade>-</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Total Credits</div>
+                        <div class="result-value" data-result-credits>-</div>
+                    </div>
+                </div>
+            </section>
+            <p class="calculator-note">Formula: GPA = Sum(grade point × credit hours) / Sum(credit hours).</p>
+
+            <!-- FAQ Section for Management GPA Calculator -->
+            <section id="faq" style="margin-top: 60px;">
+                <div class="section-container">
+                    <div class="section-header fade-up">
+                        <span class="section-label">FAQ</span>
+                        <h2>Management Stream GPA Calculator FAQs</h2>
+                        <p>Answers to common questions about Class 11 & 12 Management stream grading.</p>
+                    </div>
+                    <div class="faq-container">
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                What subjects are in NEB Management stream?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>NEB Management stream includes: <strong>Economics, Accounting, Business Mathematics</strong> (compulsory), plus optional subjects like Governance, Finance, Tourism Management, or Computer Applications. The curriculum focuses on business and social sciences instead of natural sciences. This calculator supports all optional subject combinations.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                How is Management stream grading different from Science?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>The core difference is subject composition: <a href="./science.html">Science</a> focuses on Physics, Chemistry, Biology, and Mathematics, while Management emphasizes Economics, Accounting, and Business subjects. Both use the same 4.0 GPA scale and calculation formula. The grading difficulty and practical components vary by subject type.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                Do Management subjects have practical exams?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Most Management subjects are <strong>100% theory-based</strong> (Accounting, Economics, Business Math). Some optional subjects like Computer Applications or Tourism Management may include practical components (typically 25-40%). This calculator adjusts weightings based on subject type automatically.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                What's a competitive GPA for Management stream?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>A <strong>3.6+ GPA is considered competitive</strong> in Management stream for university admissions, scholarships, and professional programs. A 3.2+ is good, while 2.8-3.2 is average. Business schools and MBA programs often target 3.4+ candidates. Check specific program requirements for exact cutoffs.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                Can I switch from Science to Management stream?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, you can switch streams between Class 11 and Class 12, or from <a href="../index.html">SEE (Class 10)</a> directly to Management in Class 11. Your GPA from the previous stream doesn't carry over—you start fresh with Management subjects. Both use the same 4.0 scale for fair comparison.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item fade-up">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                Which Management subject weighs most in GPA?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon"><path d="m6 9 6 6 6-6"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>All subjects have equal credit hours (4.0) in Management stream, so each subject contributes equally to GPA. However, improving one subject grade by one letter has the same impact on GPA regardless of subject. Use this calculator to see exactly which subject improvements will best impact your final GPA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../assets/js/calculator.js"></script>
+    <script>
+        // Counter badge updater
+        (function() {
+            const chips = document.querySelectorAll('.optional-subject-checkbox');
+            const counter = document.getElementById('optional-counter');
+            const hint = document.getElementById('optional-hint');
+
+            function updateCounter() {
+                const checked = document.querySelectorAll('.optional-subject-checkbox:checked').length;
+                counter.textContent = checked + ' / 4 selected';
+
+                // Visual feedback when at limit
+                if (checked >= 4) {
+                    counter.classList.add('at-limit');
+                    hint.textContent = 'Maximum reached — uncheck a subject to swap.';
+                    hint.classList.add('at-limit');
+                } else {
+                    counter.classList.remove('at-limit');
+                    hint.textContent = 'Select up to 4 optional subjects to add them to your calculation.';
+                    hint.classList.remove('at-limit');
+                }
+            }
+
+            chips.forEach(cb => cb.addEventListener('change', updateCounter));
+        })();
+    </script>
+</body>
+</html>

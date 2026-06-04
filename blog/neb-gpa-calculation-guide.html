@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEB GPA Calculation Guide: Complete Formula & Examples 2026</title>
+    <meta name="description" content="Complete guide to NEB GPA calculation. Learn the formula, grade scale conversion, credit hour weighting, and how to calculate your GPA using real examples for Science, Management, and SEE.">
+    <meta name="keywords" content="NEB GPA calculation, how to calculate GPA Nepal, NEB grade scale, GPA formula, convert marks to GPA, Nepal education board, credit hour calculation">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://neb.amritkc.com.np/blog/neb-gpa-calculation-guide.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://neb.amritkc.com.np/blog/neb-gpa-calculation-guide.html">
+    <meta property="og:title" content="NEB GPA Calculation Guide: Complete Formula & Examples 2026">
+    <meta property="og:description" content="Learn how to calculate your NEB GPA with the official formula, grade scale conversion tables, and step-by-step examples for all streams.">
+    <meta property="og:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+    <meta property="article:published_time" content="2026-06-03T00:00:00+05:45">
+    <meta property="article:author" content="Amrit KC">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://neb.amritkc.com.np/blog/neb-gpa-calculation-guide.html">
+    <meta property="twitter:title" content="NEB GPA Calculation Guide: Complete Formula & Examples 2026">
+    <meta property="twitter:description" content="Learn how to calculate your NEB GPA with the official formula, grade scale conversion tables, and step-by-step examples for all streams.">
+    <meta property="twitter:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+        
+        .blog-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(124, 92, 255, 0.1);
+        }
+        
+        .blog-header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+        
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .blog-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .blog-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .blog-content p {
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+        
+        .blog-content a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(124, 92, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-content a:hover {
+            border-bottom-color: var(--accent);
+            padding-bottom: 2px;
+        }
+        
+        .blog-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        
+        .blog-content li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+            font-size: 16px;
+        }
+        
+        .blog-content li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .blog-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .blog-content ol li {
+            margin-bottom: 12px;
+            font-size: 16px;
+            list-style-position: inside;
+        }
+        
+        .blog-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .grade-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            overflow-x: auto;
+            display: block;
+        }
+        
+        .grade-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(124, 92, 255, 0.02);
+            border: 1px solid rgba(124, 92, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .grade-table th {
+            background: rgba(124, 92, 255, 0.08);
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-primary);
+            border-bottom: 2px solid rgba(124, 92, 255, 0.15);
+            font-size: 15px;
+        }
+        
+        .grade-table td {
+            padding: 14px 15px;
+            border-bottom: 1px solid rgba(124, 92, 255, 0.08);
+            font-size: 15px;
+        }
+        
+        .grade-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .grade-table tr:hover td {
+            background: rgba(124, 92, 255, 0.04);
+        }
+        
+        .formula-box {
+            background: rgba(124, 92, 255, 0.06);
+            border-left: 4px solid var(--accent);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .formula-box code {
+            font-size: 15px;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .example-box {
+            background: rgba(79, 70, 229, 0.03);
+            border-left: 4px solid #4F46E5;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .example-box h4 {
+            font-weight: 600;
+            color: #4F46E5;
+            margin-bottom: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .callout {
+            background: rgba(245, 158, 11, 0.08);
+            border-left: 4px solid #F59E0B;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .callout strong {
+            color: #F59E0B;
+        }
+        
+        .internal-link-cta {
+            background: rgba(124, 92, 255, 0.08);
+            border: 1px solid rgba(124, 92, 255, 0.15);
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .internal-link-cta-text h4 {
+            margin: 0 0 6px 0;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .internal-link-cta-text p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        .internal-link-cta-btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            white-space: nowrap;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .internal-link-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 92, 255, 0.25);
+        }
+        
+        .breadcrumb {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(124, 92, 255, 0.08);
+        }
+        
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .breadcrumb span {
+            color: var(--text-muted);
+            margin: 0 8px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-post {
+                padding: 40px 20px;
+            }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-content h2 {
+                font-size: 1.6rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.2rem;
+            }
+            
+            .internal-link-cta {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .internal-link-cta-btn {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "NEB GPA Calculation Guide: Complete Formula & Examples 2026",
+      "description": "Complete guide to NEB GPA calculation. Learn the formula, grade scale conversion, credit hour weighting, and how to calculate your GPA using real examples.",
+      "image": "https://neb.amritkc.com.np/assets/images/logo.png",
+      "datePublished": "2026-06-03T00:00:00+05:45",
+      "author": {
+        "@type": "Person",
+        "name": "Amrit KC"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Amrit KC GPA Calculator",
+        "url": "https://neb.amritkc.com.np/",
+        "logo": "https://neb.amritkc.com.np/assets/images/logo.png"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="ambient-bg">
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <div class="blog-post">
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="/blog/">Blog</a>
+            <span>/</span>
+            <span>NEB GPA Calculation Guide</span>
+        </div>
+
+        <article>
+            <header class="blog-header">
+                <h1>NEB GPA Calculation Guide: Complete Formula & Examples 2026</h1>
+                <div class="blog-meta">
+                    <span>📅 June 3, 2026</span>
+                    <span>✍️ Amrit KC</span>
+                    <span>⏱️ 8 min read</span>
+                </div>
+            </header>
+
+            <div class="blog-content">
+                <p>Understanding how to calculate your GPA under the Nepal Education Board (NEB) system is essential for every student. Whether you're in SEE (Class 10), Class 11, or preparing for Class 12, knowing your exact GPA helps you make informed decisions about your academic future, college applications, and scholarship opportunities.</p>
+                
+                <p>In this comprehensive guide, we'll walk you through the official <strong>NEB GPA calculation formula</strong>, show you how marks convert to grade points, explain credit hour weighting, and provide real-world examples you can use right now.</p>
+
+                <h2>What is GPA and Why Does It Matter?</h2>
+                
+                <p>GPA stands for <strong>Grade Point Average</strong>. In the NEB system, it's a numerical representation of your academic performance on a <strong>4.0 scale</strong>. Your GPA combines grades from all subjects, weighted by their credit hours.</p>
+                
+                <p>Your GPA is important because:</p>
+                <ul>
+                    <li>Universities use it for admissions decisions and merit scholarships</li>
+                    <li>Professional programs (medical, engineering) often require minimum GPA cutoffs</li>
+                    <li>Employers and graduate programs may review your GPA</li>
+                    <li>International universities use it to evaluate your academic record</li>
+                    <li>Some scholarships abroad require a minimum GPA (typically 3.0+)</li>
+                </ul>
+
+                <h2>The Official NEB GPA Formula</h2>
+                
+                <p>The NEB uses a standardized formula to calculate GPA. Here it is:</p>
+                
+                <div class="formula-box">
+                    <code>GPA = Sum(Grade Point × Credit Hours) / Sum(Credit Hours)</code>
+                </div>
+
+                <p>In simpler terms:</p>
+                <ol>
+                    <li>For each subject, multiply the <strong>grade point</strong> by its <strong>credit hours</strong></li>
+                    <li>Add all these products together</li>
+                    <li>Divide by the total number of credit hours</li>
+                    <li>The result is your GPA</li>
+                </ol>
+
+                <p>Let's break down each component so you understand exactly what this means.</p>
+
+                <h2>NEB Grade Scale: Marks to Grade Points</h2>
+                
+                <p>The first step in calculating GPA is converting your subject marks into grade points. NEB uses a standardized grade scale where percentage marks map directly to grade letters and points:</p>
+                
+                <div class="grade-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mark Range (%)</th>
+                                <th>Grade Letter</th>
+                                <th>Grade Point</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>80–100</td>
+                                <td><strong>A</strong></td>
+                                <td><strong>4.0</strong></td>
+                                <td>Excellent</td>
+                            </tr>
+                            <tr>
+                                <td>70–79</td>
+                                <td><strong>A–</strong></td>
+                                <td><strong>3.6</strong></td>
+                                <td>Very Good</td>
+                            </tr>
+                            <tr>
+                                <td>60–69</td>
+                                <td><strong>B</strong></td>
+                                <td><strong>3.2</strong></td>
+                                <td>Good</td>
+                            </tr>
+                            <tr>
+                                <td>50–59</td>
+                                <td><strong>B–</strong></td>
+                                <td><strong>2.8</strong></td>
+                                <td>Average</td>
+                            </tr>
+                            <tr>
+                                <td>40–49</td>
+                                <td><strong>C</strong></td>
+                                <td><strong>2.4</strong></td>
+                                <td>Pass</td>
+                            </tr>
+                            <tr>
+                                <td>35–39</td>
+                                <td><strong>D</strong></td>
+                                <td><strong>1.6</strong></td>
+                                <td>Minimum Pass</td>
+                            </tr>
+                            <tr>
+                                <td>Below 35</td>
+                                <td><strong>NG</strong></td>
+                                <td><strong>0.0</strong></td>
+                                <td>Not Graded (Fail)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout">
+                    <strong>⚠️ Important:</strong> In the NEB system, you must score at least 35% in each subject to pass. Any subject below 35% receives NG (Not Graded) status, which means you cannot pass the examination overall, even if other subjects are excellent.
+                </div>
+
+                <h2>Understanding Credit Hours</h2>
+                
+                <p>Credit hours represent the <strong>weight or importance</strong> of each subject in your overall GPA calculation. Different subjects have different credit hours based on NEB curriculum standards.</p>
+                
+                <h3>Credit Hours by Stream</h3>
+                
+                <p><strong>SEE (Class 10) – All Subjects:</strong> 4.0 credit hours each</p>
+                <p>All eight compulsory subjects in SEE have equal weight (4.0 credits). If you take optional subjects, they also count as 4.0 credits.</p>
+                
+                <p><strong>Class 11 & 12 Science Stream:</strong></p>
+                <ul>
+                    <li>Physics: 3.0 credit hours</li>
+                    <li>Chemistry: 3.0 credit hours</li>
+                    <li>Biology: 3.0 credit hours</li>
+                    <li>Mathematics: 3.0 credit hours</li>
+                    <li>English: 2.0 credit hours</li>
+                    <li>Optional Subjects: Variable (2.0–3.0)</li>
+                </ul>
+                
+                <p><strong>Class 11 & 12 Management Stream:</strong></p>
+                <ul>
+                    <li>Economics: 3.0 credit hours</li>
+                    <li>Accounting: 3.0 credit hours</li>
+                    <li>Business Mathematics: 3.0 credit hours</li>
+                    <li>English: 2.0 credit hours</li>
+                    <li>Optional Subjects: Variable (2.0–3.0)</li>
+                </ul>
+
+                <div class="callout">
+                    <strong>💡 Pro Tip:</strong> Notice that in Class 11 & 12, core subjects (Physics, Chemistry, Biology, Economics, Accounting, Business Math) have higher credit hours (3.0) compared to English (2.0). This means improving your performance in core subjects has a larger impact on your final GPA.
+                </div>
+
+                <h2>Step-by-Step GPA Calculation Examples</h2>
+                
+                <p>Let's work through real examples to show exactly how to calculate your GPA.</p>
+
+                <h3>Example 1: SEE (Class 10) GPA Calculation</h3>
+                
+                <p>Suppose a student in SEE has these subject marks:</p>
+                
+                <div class="grade-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Total Marks</th>
+                                <th>Percentage</th>
+                                <th>Grade</th>
+                                <th>Grade Point</th>
+                                <th>Credit Hours</th>
+                                <th>Points (GP × CH)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nepali</td>
+                                <td>78/100</td>
+                                <td>78%</td>
+                                <td>A–</td>
+                                <td>3.6</td>
+                                <td>4.0</td>
+                                <td>14.4</td>
+                            </tr>
+                            <tr>
+                                <td>English</td>
+                                <td>72/100</td>
+                                <td>72%</td>
+                                <td>A–</td>
+                                <td>3.6</td>
+                                <td>4.0</td>
+                                <td>14.4</td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics</td>
+                                <td>65/100</td>
+                                <td>65%</td>
+                                <td>B</td>
+                                <td>3.2</td>
+                                <td>4.0</td>
+                                <td>12.8</td>
+                            </tr>
+                            <tr>
+                                <td>Science</td>
+                                <td>80/100</td>
+                                <td>80%</td>
+                                <td>A</td>
+                                <td>4.0</td>
+                                <td>4.0</td>
+                                <td>16.0</td>
+                            </tr>
+                            <tr>
+                                <td>Social Studies</td>
+                                <td>58/100</td>
+                                <td>58%</td>
+                                <td>B–</td>
+                                <td>2.8</td>
+                                <td>4.0</td>
+                                <td>11.2</td>
+                            </tr>
+                            <tr>
+                                <td>Health & PE</td>
+                                <td>85/100</td>
+                                <td>85%</td>
+                                <td>A</td>
+                                <td>4.0</td>
+                                <td>4.0</td>
+                                <td>16.0</td>
+                            </tr>
+                            <tr>
+                                <td>Optional (Comp Sci)</td>
+                                <td>88/100</td>
+                                <td>88%</td>
+                                <td>A</td>
+                                <td>4.0</td>
+                                <td>4.0</td>
+                                <td>16.0</td>
+                            </tr>
+                            <tr>
+                                <td>Practical Science</td>
+                                <td>92/100</td>
+                                <td>92%</td>
+                                <td>A</td>
+                                <td>4.0</td>
+                                <td>4.0</td>
+                                <td>16.0</td>
+                            </tr>
+                            <tr style="font-weight: 600; background: rgba(124, 92, 255, 0.08);">
+                                <td colspan="5">TOTAL</td>
+                                <td>32.0</td>
+                                <td><strong>116.8</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="example-box">
+                    <h4>Calculation</h4>
+                    <code>GPA = 116.8 ÷ 32.0 = <strong>3.65</strong></code>
+                    <p style="margin-top: 12px; margin-bottom: 0;">This student achieved a <strong>3.65 GPA in SEE</strong>, which is an excellent score and meets the competitive threshold for most universities and scholarships.</p>
+                </div>
+
+                <h3>Example 2: Class 11 Science Stream GPA Calculation</h3>
+                
+                <p>Now let's calculate GPA for a Class 11 Science student:</p>
+                
+                <div class="grade-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>%</th>
+                                <th>Grade</th>
+                                <th>Grade Point</th>
+                                <th>Credit Hours</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Physics</td>
+                                <td>75/100</td>
+                                <td>75%</td>
+                                <td>A–</td>
+                                <td>3.6</td>
+                                <td>3.0</td>
+                                <td>10.8</td>
+                            </tr>
+                            <tr>
+                                <td>Chemistry</td>
+                                <td>68/100</td>
+                                <td>68%</td>
+                                <td>B</td>
+                                <td>3.2</td>
+                                <td>3.0</td>
+                                <td>9.6</td>
+                            </tr>
+                            <tr>
+                                <td>Biology</td>
+                                <td>82/100</td>
+                                <td>82%</td>
+                                <td>A</td>
+                                <td>4.0</td>
+                                <td>3.0</td>
+                                <td>12.0</td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics</td>
+                                <td>60/100</td>
+                                <td>60%</td>
+                                <td>B</td>
+                                <td>3.2</td>
+                                <td>3.0</td>
+                                <td>9.6</td>
+                            </tr>
+                            <tr>
+                                <td>English</td>
+                                <td>70/100</td>
+                                <td>70%</td>
+                                <td>A–</td>
+                                <td>3.6</td>
+                                <td>2.0</td>
+                                <td>7.2</td>
+                            </tr>
+                            <tr style="font-weight: 600; background: rgba(124, 92, 255, 0.08);">
+                                <td colspan="4">TOTAL</td>
+                                <td>15.0</td>
+                                <td><strong>49.2</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="example-box">
+                    <h4>Calculation</h4>
+                    <code>GPA = 49.2 ÷ 15.0 = <strong>3.28</strong></code>
+                    <p style="margin-top: 12px; margin-bottom: 0;">This student's Class 11 Science GPA is <strong>3.28</strong>, which is a solid, competitive score.</p>
+                </div>
+
+                <div class="callout">
+                    <strong>📊 Observation:</strong> Notice that the student's Physics grade (75%) has equal weight to Chemistry (68%) in terms of credit hours (both 3.0), but because Physics has a higher grade point (3.6 vs 3.2), it contributes more to the overall GPA. This is why focusing on difficult core subjects matters most.
+                </div>
+
+                <h2>Common GPA Calculation Questions</h2>
+
+                <h3>What's a Good GPA?</h3>
+                <p>GPA standards vary by use case:</p>
+                <ul>
+                    <li><strong>3.6+:</strong> Excellent (competitive for scholarships, medical/engineering entrance exams)</li>
+                    <li><strong>3.2–3.6:</strong> Good (meets most university admissions requirements)</li>
+                    <li><strong>2.8–3.2:</strong> Average (passing but below competitive threshold)</li>
+                    <li><strong>2.4–2.8:</strong> Below Average (meets minimum requirements)</li>
+                    <li><strong>Below 2.4:</strong> Poor (risk of academic probation at some universities)</li>
+                </ul>
+
+                <h3>What Happens If I Fail One Subject?</h3>
+                <p>If you score below 35% in any subject (NG status), you <strong>cannot pass the exam overall</strong>. Your overall result will be withheld until you either retake that subject or pass a supplementary exam. The NG subject receives 0.0 grade points, which would significantly lower your GPA if you later clear it with a lower grade.</p>
+
+                <h3>How Do Optional Subjects Affect GPA?</h3>
+                <p>Optional subjects are treated identically to compulsory subjects in GPA calculation. They have the same credit hours and use the same grade scale. So if you choose an optional subject, it counts fully toward your GPA.</p>
+
+                <h3>Is GPA Cumulative Across Years?</h3>
+                <p>No. Your Class 11 GPA is separate from your Class 12 GPA. Each year is calculated independently. However, many universities and scholarship programs may ask for your Class 12 GPA only, or they may average both years.</p>
+
+                <h2>How to Calculate Your GPA Quickly</h2>
+                
+                <p>If manual calculation seems tedious, our <a href="/">NEB GPA Calculator</a> does it instantly. Simply:</p>
+                <ol>
+                    <li>Select your stream (Science, Management, or SEE)</li>
+                    <li>Enter your marks for each subject</li>
+                    <li>The calculator automatically converts to grade points and applies credit hour weighting</li>
+                    <li>Your exact GPA appears instantly</li>
+                </ol>
+
+                <div class="internal-link-cta">
+                    <div class="internal-link-cta-text">
+                        <h4>Calculate Your GPA Instantly</h4>
+                        <p>Use our free, accurate GPA calculators for SEE, Science, and Management streams.</p>
+                    </div>
+                    <a href="/#tools" class="internal-link-cta-btn">Try Calculator</a>
+                </div>
+
+                <h2>Pro Tips for GPA Optimization</h2>
+                
+                <h3>1. Focus on High-Credit Subjects First</h3>
+                <p>Since core subjects have higher credit hours (3.0) compared to English (2.0), improving your grade in a core subject has 1.5x more impact on your GPA. In Science: Physics, Chemistry, Biology, Math. In Management: Economics, Accounting, Business Math.</p>
+                
+                <h3>2. Target Grade Boundaries</h3>
+                <p>If you're at 69% (currently B, 3.2 points), getting to 70% (A–, 3.6 points) on a core subject jumps your GPA significantly more than improving from 49% to 50% (both C, 2.4 points).</p>
+                
+                <h3>3. Don't Neglect "Smaller" Subjects</h3>
+                <p>While English has only 2.0 credit hours, a failing grade there means NG status and you can't pass overall. Always prioritize getting above 35% in every subject first.</p>
+                
+                <h3>4. Plan Your Stream Carefully</h3>
+                <p><a href="../pages/science.html">Science</a> and <a href="../pages/management.html">Management</a> have different difficulty levels for different students. Choose the stream where you're strongest, as both use the same 4.0 GPA scale for fair comparison.</p>
+
+                <h2>Frequently Asked Questions</h2>
+
+                <div style="margin: 30px 0;">
+                    <h3>Q: Can I improve my GPA after it's calculated?</h3>
+                    <p>Yes, but it requires retaking the exam or taking a supplementary exam in weak subjects. Your improved grade replaces the previous one in most cases, recalculating your overall GPA.</p>
+                </div>
+
+                <div style="margin: 30px 0;">
+                    <h3>Q: How is GPA calculated if I have 9 subjects instead of 8?</h3>
+                    <p>The formula remains the same: sum all (grade point × credit hours) and divide by total credit hours. If you have 9 subjects with 4.0 credits each, you'd divide by 36 instead of 32.</p>
+                </div>
+
+                <div style="margin: 30px 0;">
+                    <h3>Q: Do universities recalculate GPA differently?</h3>
+                    <p>Some universities may convert your NEB GPA to their own system or use different weightings for admissions. However, your official NEB GPA using the 4.0 scale is the standard for all Nepali education board exams.</p>
+                </div>
+
+                <div style="margin: 30px 0;">
+                    <h3>Q: What GPA do I need for a scholarship abroad?</h3>
+                    <p>Most universities in the USA require 3.0+ GPA, while UK and Australian universities typically want 2.8+. Medical and top-tier programs often expect 3.4+. Check specific university requirements for exact cutoffs.</p>
+                </div>
+
+                <h2>Key Takeaways</h2>
+                
+                <ul>
+                    <li>NEB uses a <strong>4.0 GPA scale</strong> with the formula: Sum(Grade Point × Credit Hours) ÷ Total Credit Hours</li>
+                    <li>Convert your subject marks to grade points using the official grade scale (A=4.0, A–=3.6, etc.)</li>
+                    <li>Core subjects in Science/Management have higher credit hours (3.0) than English (2.0), so focus on them for bigger GPA impact</li>
+                    <li>You must score 35%+ in every subject to pass; below 35% is NG (Not Graded) status</li>
+                    <li>3.6+ GPA is competitive for scholarships; 3.2+ is good for general admissions</li>
+                    <li>Use a <a href="/#tools">GPA calculator</a> to verify your calculations instantly</li>
+                </ul>
+
+                <div class="internal-link-cta">
+                    <div class="internal-link-cta-text">
+                        <h4>Stream-Specific GPA Calculators</h4>
+                        <p>Calculate your GPA for SEE (Class 10), Science, or Management streams with automatic credit hour weighting.</p>
+                    </div>
+                    <a href="/#tools" class="internal-link-cta-btn">Start Calculating</a>
+                </div>
+
+                <h2>Next Steps</h2>
+                
+                <p>Now that you understand how NEB GPA is calculated, here's what you can do:</p>
+                
+                <ol>
+                    <li><strong>Calculate your current GPA</strong> using our <a href="../pages/see.html">SEE Calculator</a>, <a href="../pages/science.html">Science Calculator</a>, or <a href="../pages/management.html">Management Calculator</a></li>
+                    <li><strong>Identify weak subjects</strong> – those pulling down your GPA the most</li>
+                    <li><strong>Create a study plan</strong> – focus on high-credit subjects and grade boundaries for maximum impact</li>
+                    <li><strong>Check university requirements</strong> – know the GPA cutoff for your target programs</li>
+                    <li><strong>Track progress</strong> – recalculate after exams to measure improvement</li>
+                </ol>
+
+                <p>Good luck with your studies! If you have any questions about GPA calculation or our tools, <a href="../index.html#contact">contact us</a> anytime.</p>
+            </div>
+        </article>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
