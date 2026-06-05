@@ -1,6 +1,8 @@
-# NEB GPA
+# NEB GPA Calculator
 
-Static NEB GPA calculator project.
+Live site: https://neb.amritkc.com.np
+
+A free GPA calculator for NEB students in Nepal.
 
 ## Structure
 
@@ -13,3 +15,4 @@ Static NEB GPA calculator project.
 - `assets/js/main.js` — landing page interactions
 - `assets/js/calculator.js` — shared GPA calculation logic
 - `assets/images/` — image assets
+
