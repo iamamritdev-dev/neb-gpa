@@ -110,6 +110,19 @@ function getGrade(mark) {
     return gradeScale.find(item => mark >= item.min);
 }
 
+function getGpaGrade(gpa) {
+    if (Number.isNaN(gpa) || gpa < 0) return '-';
+    const val = Number.parseFloat(Number(gpa).toFixed(2));
+    if (val >= 3.60) return 'A+';
+    if (val >= 3.20) return 'A';
+    if (val >= 2.80) return 'B+';
+    if (val >= 2.40) return 'B';
+    if (val >= 2.00) return 'C+';
+    if (val >= 1.60) return 'C';
+    if (val >= 1.00) return 'D';
+    return 'NG';
+}
+
 function createRow(subject = '', credit = 4, mark = '') {
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -261,8 +274,7 @@ function calculateAdvancedGpa() {
             
             subjectGp = ((thGrade.point * thCredit) + (prGrade.point * prCredit)) / totalSubjectCredit;
             
-            const findGrade = (gp) => gradeScale.find(item => Number(gp).toFixed(2) >= item.point)?.grade || 'NG';
-            const overallSubjectGrade = findGrade(subjectGp);
+            const overallSubjectGrade = getGpaGrade(subjectGp);
             
             if (thGrade.grade === 'NG' || prGrade.grade === 'NG') {
                 subjectGp = 0; 
@@ -282,7 +294,7 @@ function calculateAdvancedGpa() {
     });
 
     const gpa = totalCredits > 0 ? totalWeightedPoints / totalCredits : 0;
-    const overallGrade = totalCredits > 0 ? gradeScale.find(item => Number(gpa).toFixed(2) >= item.point)?.grade || 'NG' : '-';
+    const overallGrade = totalCredits > 0 ? getGpaGrade(gpa) : '-';
 
     resultGpa.textContent = totalCredits > 0 ? gpa.toFixed(2) : '-';
     resultGrade.textContent = lowestGradePoint === 0 ? 'NG' : overallGrade;
@@ -316,7 +328,7 @@ function calculateGpa() {
     });
 
     const gpa = totalCredits > 0 ? totalWeightedPoints / totalCredits : 0;
-    const overallGrade = totalCredits > 0 ? gradeScale.find(item => Number(gpa).toFixed(2) >= item.point)?.grade || 'NG' : '-';
+    const overallGrade = totalCredits > 0 ? getGpaGrade(gpa) : '-';
 
     resultGpa.textContent = totalCredits > 0 ? gpa.toFixed(2) : '-';
     resultGrade.textContent = lowestGradePoint === 0 ? 'NG' : overallGrade;
@@ -353,7 +365,7 @@ if (calcBtn) {
         // scroll the result into view so users on small screens see the GPA.
         const resultEl = document.querySelector('.calculator-result');
         if (resultEl) {
-            const offset = 80; // pixels to offset from top
+            const offset = 130; // pixels to offset from top to prevent overlap from fixed header
             const target = resultEl.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: target, behavior: 'smooth' });
         }

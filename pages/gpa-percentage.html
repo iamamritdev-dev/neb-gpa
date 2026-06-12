@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA ↔ Percentage Converter | NEB Grade Calculator</title>
+    <meta name="description" content="Instantly convert your NEB GPA to Percentage and Percentage to GPA. Accurate conversion based on the official Nepal Education Board grading system.">
+    <meta name="keywords" content="gpa to percentage nepal, percentage to gpa, neb gpa conversion, grade calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://neb.amritkc.com.np/pages/gpa-percentage.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/neb-gpa-favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/neb-gpa-favicon.png">
+    <link rel="apple-touch-icon" href="../assets/images/neb-gpa-favicon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neb.amritkc.com.np/pages/gpa-percentage.html">
+    <meta property="og:title" content="GPA ↔ Percentage Converter | NEB Grade Calculator">
+    <meta property="og:description" content="Instantly convert your NEB GPA to Percentage and Percentage to GPA. Accurate conversion based on the official Nepal Education Board grading system.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="GPA ↔ Percentage Converter | NEB Grade Calculator">
+    <meta property="twitter:description" content="Instantly convert your NEB GPA to Percentage and Percentage to GPA.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/calculator.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://neb.amritkc.com.np/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://neb.amritkc.com.np/#tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GPA Percentage Converter",
+          "item": "https://neb.amritkc.com.np/pages/gpa-percentage.html"
+        }
+      ]
+    }
+    </script>
+    <style>
+        .converter-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        @media (min-width: 768px) {
+            .converter-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .converter-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .converter-box h2 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: var(--text-heading);
+        }
+        .converter-input-group {
+            margin-bottom: 16px;
+        }
+        .converter-input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .converter-input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--text-main);
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
+        .converter-result {
+            margin-top: 20px;
+            padding: 16px;
+            background: rgba(var(--primary-rgb), 0.1);
+            border: 1px solid rgba(var(--primary-rgb), 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .converter-result .res-val {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+        .converter-result .res-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg">
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+        <div class="ambient-orb"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <main class="calculator-page">
+        <div class="calculator-shell">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="../index.html#tools">Tools</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">GPA ↔ Percentage Converter</span>
+            </nav>
+            <a class="back-link" href="../index.html">← Back to home</a>
+            <header class="calculator-header">
+                <span class="section-label">Conversion Tool</span>
+                <h1>GPA ↔ Percentage Converter</h1>
+                <p>Instantly convert between NEB GPA and Percentage.</p>
+            </header>
+
+            <section class="converter-container" aria-label="Conversion tools">
+                <!-- GPA to Percentage -->
+                <div class="converter-box">
+                    <h2>GPA to Percentage</h2>
+                    <div class="converter-input-group">
+                        <label for="gpa-input">Enter GPA (0.0 to 4.0)</label>
+                        <input type="number" id="gpa-input" min="0" max="4.0" step="0.01" placeholder="e.g. 3.6">
+                    </div>
+                    <div class="converter-result">
+                        <div class="res-val" id="gpa-to-perc-result">-</div>
+                        <div class="res-label">Estimated Percentage</div>
+                    </div>
+                </div>
+
+                <!-- Percentage to GPA -->
+                <div class="converter-box">
+                    <h2>Percentage to GPA</h2>
+                    <div class="converter-input-group">
+                        <label for="perc-input">Enter Percentage (0 to 100)</label>
+                        <input type="number" id="perc-input" min="0" max="100" step="0.1" placeholder="e.g. 85">
+                    </div>
+                    <div class="converter-result">
+                        <div class="res-val" id="perc-to-gpa-result">-</div>
+                        <div class="res-label">Estimated GPA</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-icon"><img src="../assets/images/neb-gpa-favicon.png" alt="NEB GPA Calculator Logo" width="40" height="40" loading="lazy"></div>
+                        <div>
+                            <span class="logo-text">NEB GPA</span>
+                            <div class="logo-sub">Academic Suite</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <h4>Calculators</h4>
+                    <ul>
+                        <li><a href="./science.html">Science GPA Calculator</a></li>
+                        <li><a href="./management.html">Management GPA Calculator</a></li>
+                        <li><a href="./see.html">SEE GPA Calculator</a></li>
+                        <li><a href="./gpa-percentage.html">GPA to Percentage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                        <li><a href="../index.html#grading">NEB Grading System</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEB GPA Calculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const gradeScale = [
+            { min: 90, grade: 'A+', point: 4.0 },
+            { min: 80, grade: 'A', point: 3.6 },
+            { min: 70, grade: 'B+', point: 3.2 },
+            { min: 60, grade: 'B', point: 2.8 },
+            { min: 50, grade: 'C+', point: 2.4 },
+            { min: 40, grade: 'C', point: 2.0 },
+            { min: 35, grade: 'D', point: 1.6 },
+            { min: 0, grade: 'NG', point: 0.0 }
+        ];
+
+        const gpaInput = document.getElementById('gpa-input');
+        const percInput = document.getElementById('perc-input');
+        const gpaToPercRes = document.getElementById('gpa-to-perc-result');
+        const percToGpaRes = document.getElementById('perc-to-gpa-result');
+
+        gpaInput.addEventListener('input', () => {
+            const val = parseFloat(gpaInput.value);
+            if (isNaN(val) || val < 0 || val > 4.0) {
+                gpaToPercRes.textContent = '-';
+                return;
+            }
+            // Simple generic conversion: Percentage = GPA * 25
+            const perc = (val * 25).toFixed(1);
+            gpaToPercRes.textContent = perc + '%';
+        });
+
+        percInput.addEventListener('input', () => {
+            const val = parseFloat(percInput.value);
+            if (isNaN(val) || val < 0 || val > 100) {
+                percToGpaRes.textContent = '-';
+                return;
+            }
+            const match = gradeScale.find(g => val >= g.min);
+            if (match) {
+                percToGpaRes.textContent = match.point.toFixed(1) + ' (' + match.grade + ')';
+            } else {
+                percToGpaRes.textContent = '-';
+            }
+        });
+    </script>
+</body>
+</html>

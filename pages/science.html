@@ -8,20 +8,24 @@
     <meta name="keywords" content="science GPA calculator, NEB science, class 12 science, physics chemistry biology, Nepal education board, grade point average">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://neb.amritkc.com.np/pages/science.html">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/neb-gpa-favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/neb-gpa-favicon.png">
+    <link rel="apple-touch-icon" href="../assets/images/neb-gpa-favicon.png">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://neb.amritkc.com.np/pages/science.html">
     <meta property="og:title" content="Science GPA Calculator | NEB Class 11 & 12 Grade Calculator">
     <meta property="og:description" content="Calculate your NEB Science GPA instantly with accurate credit-hour weighting for Physics, Chemistry, Biology, and Mathematics.">
-    <meta property="og:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+    <meta property="og:image" content="https://neb.amritkc.com.np/assets/images/neb-gpa-favicon.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://neb.amritkc.com.np/pages/science.html">
     <meta property="twitter:title" content="Science GPA Calculator | NEB Class 11 & 12 Grade Calculator">
     <meta property="twitter:description" content="Calculate your NEB Science GPA instantly with accurate credit-hour weighting for Physics, Chemistry, Biology, and Mathematics.">
-    <meta property="twitter:image" content="https://neb.amritkc.com.np/assets/images/logo.png">
+    <meta property="twitter:image" content="https://neb.amritkc.com.np/assets/images/neb-gpa-favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/calculator.css">
@@ -102,6 +106,21 @@
                         <tbody data-subjects></tbody>
                     </table>
                 </div>
+                <!-- Student Info (optional, for marksheet) -->
+                <div class="student-info-bar" aria-label="Student information for marksheet">
+                    <div>
+                        <label for="ms-name">Student Name</label>
+                        <input type="text" id="ms-name" placeholder="e.g. Ram Prasad Sharma" autocomplete="name">
+                    </div>
+                    <div>
+                        <label for="ms-grade">Class / Grade</label>
+                        <input type="text" id="ms-grade" placeholder="e.g. Class 12">
+                    </div>
+                    <div>
+                        <label for="ms-stream">Stream</label>
+                        <input type="text" id="ms-stream" value="Science" placeholder="Science">
+                    </div>
+                </div>
                 <div class="calculator-actions">
                     <button type="button" class="btn-secondary" data-reset>Clear Marks</button>
                     <button type="button" class="btn-primary" data-calculate>Calculate GPA</button>
@@ -122,6 +141,8 @@
                 </div>
             </section>
             <p class="calculator-note">Formula: GPA = Sum(grade point × credit hours) / Sum(credit hours).</p>
+            <!-- Marksheet rendered here by marksheet.js -->
+            <div class="marksheet-section" aria-live="polite" aria-label="Your result marksheet"></div>
 
             <!-- FAQ Section for Science GPA Calculator -->
             <section id="faq" style="margin-top: 60px;">
@@ -198,7 +219,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="../index.html" class="logo">
-                        <div class="logo-icon">N</div>
+                        <div class="logo-icon"><img src="../assets/images/neb-gpa-favicon.png" alt="NEB GPA Calculator Logo" width="40" height="40" loading="lazy"></div>
                         <div>
                             <span class="logo-text">NEB GPA</span>
                             <div class="logo-sub">Academic Suite</div>
@@ -240,5 +261,6 @@
 
     <script src="../assets/js/calculator.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/marksheet.js"></script>
 </body>
 </html>

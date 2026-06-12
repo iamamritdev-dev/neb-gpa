@@ -182,13 +182,18 @@ nav.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: 800;
-    font-size: 16px;
-    font-family: 'Space Grotesk', sans-serif;
     box-shadow: 0 0 24px rgba(124, 92, 255, 0.35), 0 4px 12px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
 }
 
 .logo-icon::after {
@@ -197,6 +202,8 @@ nav.scrolled {
     inset: 0;
     background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.15) 50%, transparent 60%);
     animation: shimmer 3s infinite;
+    z-index: 1;
+    pointer-events: none;
 }
 
 @keyframes shimmer {
@@ -272,7 +279,7 @@ nav.scrolled {
 
 .nav-cta {
     background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 11px 26px;
     border-radius: 100px;
     font-weight: 600;
@@ -286,9 +293,11 @@ nav.scrolled {
     overflow: hidden;
 }
 
-.nav-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(124, 92, 255, 0.45);
+@media (hover: hover) {
+    .nav-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(124, 92, 255, 0.45);
+    }
 }
 
 .mobile-menu-btn {
@@ -430,6 +439,7 @@ nav.scrolled {
     position: relative;
     overflow: hidden;
     letter-spacing: 0.5px;
+    z-index: 1;
 }
 
 .btn-primary::before {
@@ -439,6 +449,7 @@ nav.scrolled {
     background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .btn-primary::after {
@@ -447,12 +458,15 @@ nav.scrolled {
     inset: 0;
     background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.12) 50%, transparent 60%);
     animation: shimmer 3s infinite;
+    z-index: -1;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 48px rgba(124, 92, 255, 0.5), inset 0 1px 0 rgba(255,255,255,0.2);
-    border-color: rgba(124, 92, 255, 0.6);
+@media (hover: hover) {
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 48px rgba(124, 92, 255, 0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+        border-color: rgba(124, 92, 255, 0.6);
+    }
 }
 
 .btn-primary:active {
@@ -486,11 +500,13 @@ nav.scrolled {
     letter-spacing: 0.5px;
 }
 
-.btn-secondary:hover {
-    background: rgba(124, 92, 255, 0.12);
-    border-color: rgba(124, 92, 255, 0.5);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(124, 92, 255, 0.15);
+@media (hover: hover) {
+    .btn-secondary:hover {
+        background: rgba(124, 92, 255, 0.12);
+        border-color: rgba(124, 92, 255, 0.5);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 32px rgba(124, 92, 255, 0.15);
+    }
 }
 
 .btn-secondary:active {
@@ -907,6 +923,7 @@ section {
     overflow: hidden;
     letter-spacing: 0.3px;
     width: 100%;
+    z-index: 1;
 }
 
 .tool-action::before {
@@ -916,10 +933,13 @@ section {
     opacity: 0;
     transition: opacity 0.35s ease;
     border-radius: inherit;
+    z-index: -1;
 }
 
-.tool-action:hover::before {
-    opacity: 1;
+@media (hover: hover) {
+    .tool-action:hover::before {
+        opacity: 1;
+    }
 }
 
 .tool-action svg {
@@ -927,8 +947,10 @@ section {
     flex-shrink: 0;
 }
 
-.tool-action:hover svg {
-    transform: translateX(4px);
+@media (hover: hover) {
+    .tool-action:hover svg {
+        transform: translateX(4px);
+    }
 }
 
 .tool-action-btn {
@@ -959,10 +981,12 @@ section {
     background: linear-gradient(135deg, #2563EB, #1D4ED8);
 }
 
-.tool-science .tool-action:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4);
-    border-color: rgba(59, 130, 246, 0.7);
+@media (hover: hover) {
+    .tool-science .tool-action:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4);
+        border-color: rgba(59, 130, 246, 0.7);
+    }
 }
 
 /* Management button */
@@ -977,10 +1001,12 @@ section {
     background: linear-gradient(135deg, #059669, #047857);
 }
 
-.tool-management .tool-action:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
-    border-color: rgba(16, 185, 129, 0.7);
+@media (hover: hover) {
+    .tool-management .tool-action:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
+        border-color: rgba(16, 185, 129, 0.7);
+    }
 }
 
 /* SEE button */
@@ -995,10 +1021,12 @@ section {
     background: linear-gradient(135deg, #F59E0B, #D97706);
 }
 
-.tool-see .tool-action:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(245, 158, 11, 0.4);
-    border-color: rgba(245, 158, 11, 0.7);
+@media (hover: hover) {
+    .tool-see .tool-action:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(245, 158, 11, 0.4);
+        border-color: rgba(245, 158, 11, 0.7);
+    }
 }
 
 .tool-see .tool-action svg {
@@ -1017,10 +1045,12 @@ section {
     background: linear-gradient(135deg, var(--accent-secondary), #3730A3);
 }
 
-.tool-extra .tool-action:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(124, 92, 255, 0.4);
-    border-color: rgba(124, 92, 255, 0.7);
+@media (hover: hover) {
+    .tool-extra .tool-action:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(124, 92, 255, 0.4);
+        border-color: rgba(124, 92, 255, 0.7);
+    }
 }
 
 .tool-action:active {
@@ -2387,12 +2417,12 @@ input, select, textarea { box-sizing: border-box; }
 :focus { outline: 3px solid rgba(124,92,255,0.12); outline-offset: 2px; }
 
 /* Slightly tighten card shadows on mobile for a modern look */
+/* Slightly tighten card shadows on mobile for a modern look */
 .tool-card { box-shadow: 0 6px 18px rgba(5,8,22,0.06); transition: transform 0.18s ease, box-shadow 0.18s ease; }
-.tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(5,8,22,0.08); }
+@media (hover: hover) {
+    .tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(5,8,22,0.08); }
+}
 
-/* Make CTA buttons consistent */
-.btn-primary, .tool-action { background: linear-gradient(90deg,var(--accent-light),var(--accent)); color: white; border: none; border-radius: 10px; }
-.btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; }
 
 /* Improve navbar tap area */
 .mobile-menu-btn, .nav a { touch-action: manipulation; }
@@ -2419,3 +2449,133 @@ input, select, textarea { box-sizing: border-box; }
 .feedback-btn.show { opacity: 1; transform: translateY(0); }
 .feedback-btn .dot { width:10px; height:10px; background: rgba(255,255,255,0.95); border-radius:50%; }
 .feedback-btn span { font-weight:600; font-size:14px; }
+
+/* Collapse tools state and reveal transition */
+.more-tools-container {
+    display: none;
+    justify-content: center;
+    margin-top: 36px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .more-tools-container {
+        display: flex;
+    }
+    .tools-grid.collapsed .tool-card.collapsed-hidden {
+        display: none !important;
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tool-card.reveal-active {
+    animation: cardReveal 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* How It Works Step Cards */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+    margin-top: 48px;
+}
+
+.steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    z-index: 1;
+}
+
+.step-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius);
+    padding: 40px 32px 32px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: var(--shadow-card);
+}
+
+@media (hover: hover) {
+    .step-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--border-card-hover);
+        box-shadow: var(--shadow-card-hover);
+    }
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--bg-deep), var(--bg-mid));
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin: -70px auto 24px;
+    box-shadow: 0 0 20px rgba(124, 92, 255, 0.25);
+    position: relative;
+    z-index: 3;
+}
+
+.step-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 12px;
+}
+
+.step-card p {
+    font-size: 14.5px;
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+/* Adjust steps layout on mobile */
+@media (max-width: 991px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        margin-top: 40px;
+    }
+    .steps-grid::before {
+        display: none;
+    }
+}
+
+/* Active/Tap feedback on mobile/touch devices */
+@media (hover: none) {
+    .btn-primary:active,
+    .btn-secondary:active,
+    .tool-action:active,
+    .nav-cta:active,
+    .tool-card:active {
+        transform: scale(0.97) !important;
+        transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+}

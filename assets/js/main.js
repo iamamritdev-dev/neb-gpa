@@ -1,39 +1,96 @@
 // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+const navbar = document.getElementById('navbar');
+let lastScrollY = window.scrollY;
+let scrollTicking = false;
 
-            // Tools search filtering: filters .tool-card elements inside #tools
-            (function() {
-                const toolsSearch = document.getElementById('tools-search');
-                const noResults = document.getElementById('tools-no-results');
-                if (!toolsSearch) return;
-                const toolsGrid = document.querySelector('#tools .tools-grid');
-                toolsSearch.addEventListener('input', () => {
-                    const q = toolsSearch.value.trim().toLowerCase();
-                    if (!toolsGrid) return;
-                    const cards = toolsGrid.querySelectorAll('.tool-card');
-                    let any = false;
-                    cards.forEach(card => {
-                        const title = (card.querySelector('h3')?.textContent || '').toLowerCase();
-                        const desc = (card.querySelector('p')?.textContent || '').toLowerCase();
-                        const subjects = Array.from(card.querySelectorAll('.subject-chip')).map(el => el.textContent.toLowerCase()).join(' ');
-                        const action = (card.querySelector('.tool-action')?.textContent || card.querySelector('.tool-action-btn')?.textContent || '').toLowerCase();
-                        if (q === '' || title.includes(q) || desc.includes(q) || subjects.includes(q) || action.includes(q)) {
-                            card.style.display = '';
-                            any = true;
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                    if (noResults) noResults.style.display = any ? 'none' : 'block';
+function updateNavbar() {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    scrollTicking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+        window.requestAnimationFrame(updateNavbar);
+        scrollTicking = true;
+    }
+}, { passive: true });
+
+// Tools search filtering & Show More/Less toggle
+(function() {
+    const toolsSearch = document.getElementById('tools-search');
+    const noResults = document.getElementById('tools-no-results');
+    const toolsGrid = document.querySelector('#tools .tools-grid');
+    const toggleBtn = document.getElementById('toggle-more-tools');
+    
+    if (!toolsGrid) return;
+    
+    // Wire up More Tools toggle
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const isCollapsed = toolsGrid.classList.contains('collapsed');
+            const hiddenCards = toolsGrid.querySelectorAll('.mobile-hidden');
+            
+            if (isCollapsed) {
+                toolsGrid.classList.remove('collapsed');
+                hiddenCards.forEach(card => {
+                    card.classList.remove('collapsed-hidden');
+                    card.classList.add('reveal-active');
                 });
-            })();
+                toggleBtn.querySelector('span').textContent = 'Show Less';
+                toggleBtn.querySelector('svg').style.transform = 'rotate(180deg)';
+            } else {
+                toolsGrid.classList.add('collapsed');
+                hiddenCards.forEach(card => {
+                    card.classList.add('collapsed-hidden');
+                    card.classList.remove('reveal-active');
+                });
+                toggleBtn.querySelector('span').textContent = 'See All Tools';
+                toggleBtn.querySelector('svg').style.transform = 'rotate(0deg)';
+            }
         });
+    }
+
+    if (toolsSearch) {
+        toolsSearch.addEventListener('input', () => {
+            const q = toolsSearch.value.trim().toLowerCase();
+            const cards = toolsGrid.querySelectorAll('.tool-card');
+            const isCollapsed = toolsGrid.classList.contains('collapsed');
+            const isSearching = q !== '';
+            let any = false;
+            
+            if (toggleBtn) {
+                toggleBtn.style.display = isSearching ? 'none' : '';
+            }
+            
+            cards.forEach(card => {
+                const title = (card.querySelector('h3')?.textContent || '').toLowerCase();
+                const desc = (card.querySelector('p')?.textContent || '').toLowerCase();
+                const subjects = Array.from(card.querySelectorAll('.subject-chip')).map(el => el.textContent.toLowerCase()).join(' ');
+                const action = (card.querySelector('.tool-action')?.textContent || card.querySelector('.tool-action-btn')?.textContent || '').toLowerCase();
+                
+                const matches = q === '' || title.includes(q) || desc.includes(q) || subjects.includes(q) || action.includes(q);
+                
+                if (matches) {
+                    // If not searching, respect mobile collapsed state
+                    if (!isSearching && window.innerWidth <= 768 && card.classList.contains('mobile-hidden') && isCollapsed) {
+                        card.style.display = 'none';
+                    } else {
+                        card.style.display = '';
+                        any = true;
+                    }
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            if (noResults) noResults.style.display = any ? 'none' : 'block';
+        });
+    }
+})();
 
         // Mobile menu toggle with icon swap
         function toggleMobileMenu() {
