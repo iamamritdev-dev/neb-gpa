@@ -1093,3 +1093,6 @@
     .marksheet-footer { padding: 14px 16px; }
     .marksheet-actions { padding: 14px 16px 18px; }
 }
+.marksheet-section{
+    display: none;
+}
