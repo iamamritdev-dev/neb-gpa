@@ -2559,6 +2559,7 @@ input, select, textarea { box-sizing: border-box; }
 /* Adjust steps layout on mobile */
 @media (max-width: 991px) {
     .steps-grid {
+        display: none;
         grid-template-columns: 1fr;
         gap: 60px;
         margin-top: 40px;
