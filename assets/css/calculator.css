@@ -823,14 +823,18 @@
     margin-top: 32px;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s ease;
     pointer-events: none;
+    height: 0;
+    overflow: hidden;
 }
 
 .marksheet-section.visible {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+    height: auto;
+    overflow: visible;
 }
 
 /* Marksheet card */
@@ -1075,24 +1079,131 @@
 .calculator-result.revealed .result-box:nth-child(2) { animation-delay: 0.06s; }
 .calculator-result.revealed .result-box:nth-child(3) { animation-delay: 0.12s; }
 
+/* Input Validation Error & Warning Styling */
+.input-error {
+    border-color: rgba(239, 68, 68, 0.8) !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+}
+
+.input-warning {
+    color: #ef4444;
+    font-size: 11px;
+    margin-top: 4px;
+    display: none;
+    align-items: center;
+    gap: 4px;
+}
+
+.input-warning.show {
+    display: flex;
+}
+
+.ms-global-warning {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 8px;
+    color: #f87171;
+    padding: 10px 14px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    animation: fadeIn 0.2s ease;
+}
+
+.ms-global-warning.show {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* Responsive marksheet */
 @media (max-width: 600px) {
+    .marksheet-header {
+        padding: 16px 14px !important;
+    }
+    .marksheet-title {
+        font-size: 16px !important;
+    }
+    .marksheet-subtitle {
+        font-size: 11px !important;
+    }
+    .marksheet-student-row {
+        padding: 10px 12px !important;
+        gap: 12px !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap !important;
+    }
+    .marksheet-student-row .meta-item {
+        flex: 1 !important;
+        min-width: 80px !important;
+    }
+    .marksheet-student-row .meta-label {
+        font-size: 9px !important;
+    }
+    .marksheet-student-row .meta-value {
+        font-size: 12px !important;
+    }
+    .marksheet-table th,
+    .marksheet-table td {
+        padding: 8px 6px !important;
+        font-size: 11.5px !important;
+    }
+    .marksheet-table th:first-child,
+    .marksheet-table td:first-child {
+        padding-left: 10px !important;
+        width: 35% !important;
+    }
+    .marksheet-table th:last-child,
+    .marksheet-table td:last-child {
+        padding-right: 10px !important;
+    }
+    .ms-grade-badge {
+        padding: 1px 6px !important;
+        font-size: 10px !important;
+    }
+    .marksheet-gp-value {
+        font-size: 11.5px !important;
+    }
     .marksheet-summary {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr) !important;
     }
     .ms-summary-box {
-        border-right: none;
-        border-bottom: 1px solid var(--border-card);
-        padding: 16px;
+        border-right: 1px solid var(--border-card) !important;
+        border-bottom: none !important;
+        padding: 12px 4px !important;
     }
-    .ms-summary-box:last-child { border-bottom: none; }
-    .marksheet-header { padding: 20px 16px 16px; }
-    .marksheet-table th,
-    .marksheet-table td { padding: 11px 14px; font-size: 13px; }
-    .marksheet-student-row { padding: 14px 16px; gap: 16px; }
-    .marksheet-footer { padding: 14px 16px; }
-    .marksheet-actions { padding: 14px 16px 18px; }
-}
-.marksheet-section{
-    display: none;
+    .ms-summary-box:last-child {
+        border-right: none !important;
+    }
+    .ms-summary-label {
+        font-size: 9px !important;
+        margin-bottom: 2px !important;
+    }
+    .ms-summary-value {
+        font-size: 18px !important;
+    }
+    .ms-summary-box:last-child .ms-summary-value {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+    }
+    .marksheet-footer {
+        padding: 12px !important;
+        font-size: 10px !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .marksheet-actions {
+        padding: 12px !important;
+    }
+    .btn-download {
+        padding: 10px 16px !important;
+        font-size: 12.5px !important;
+    }
 }

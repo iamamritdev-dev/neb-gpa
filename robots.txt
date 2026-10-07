@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Block crawling of temp/build files if any - none present
+Disallow: /*.log$
+Disallow: /*.tmp$
+
 Sitemap: https://neb.amritkc.com.np/sitemap.xml
